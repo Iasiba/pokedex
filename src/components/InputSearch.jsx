@@ -16,7 +16,7 @@ const InputSearch = ({ setInputSearch }) => {
       
 
       <div id="menu">
-        <li class="dropdown"><a href="">Todos los pokemon</a>
+        <li className="dropdown"><a href="">Todos los pokemon</a>
           <ul>
             <li><span></span><a href="#opcion1">opcion</a></li>
             <hr />

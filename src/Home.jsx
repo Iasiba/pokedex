@@ -11,7 +11,7 @@ import Header from './components/Header.jsx'
 import poke from './img/pokede.png'
 import { useSelector, useDispatch } from 'react-redux'
 import { setName } from './store/slices/useSlice.js'
-import Pokemon from './components/pokemon'
+import Pokemon from './components/Pokemon'
 import { useForm } from 'react-hook-form'
 
 //let cont=false

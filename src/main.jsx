@@ -6,7 +6,7 @@ import App from './App'
 import Home from './Home'
 import './index.css'
 import store from './store';
-import Pokedex from './pokedex'
+import Pokedex from './Pokedex'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(

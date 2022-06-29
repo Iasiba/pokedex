@@ -101,12 +101,14 @@ hr {
   border-color: rgb(175, 130, 130);
   left: 10px;
 }
-
+#menu{
+  margin-top:30px;
+}
 #menu li {
   float: left;
   position: relative;
   padding: 6px 0;
-  margin: 0;
+  
   list-style: none;
   border-radius: 2px;
 }
@@ -194,8 +196,8 @@ h1 {
   margin: 20px auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 130px;
+  gap: 50%;
+  justify-content: center;
 }
 
 button {

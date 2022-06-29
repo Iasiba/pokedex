@@ -1,20 +1,17 @@
-import React from 'react'
-
-const InputSearch = ({ setInputSearch }) => {
-
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+const InputSearch = () => {
+  const navigate = useNavigate()
   const submit = e => {
     e.preventDefault()
-    setInputSearch(e.target.firstChild.value)
-    console.log(e.target.firstChild.value)
+    navigate(`/Pokemon/${e.target.firstChild.value}`)
   }
-
   return (
-    <form className='form' onSubmit={submit}>
-      
+    <section className='form' >
+      <form onSubmit={submit}>
         <input type="text" />
-        <button> {' Buscar '} </button>
-      
-
+        <button > {' Buscar '} </button>
+      </form>
       <div id="menu">
         <li className="dropdown"><a href="">Todos los pokemon</a>
           <ul>
@@ -27,7 +24,9 @@ const InputSearch = ({ setInputSearch }) => {
         </li>
       </div>
 
-    </form>
+
+    </section>
+
   )
 }
 

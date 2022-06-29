@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import {
-  HashRouter,
   Routes,
   Route,
   Navigate,
@@ -38,7 +37,8 @@ const Home = () => {
       {
       //<Link to='/'>Home</Link>
       //<Link to='/Pokedex'>Pokedex</Link>
-      <Link to='/Pokedex/:id'>Buscar</Link>}
+      //<Link to='/Pokedex/:id'>Buscar</Link>
+    }
       <Routes>
         <Route path="/" element={<div className='Bienvenida'>
           <img src={poke} alt="" />
@@ -55,8 +55,8 @@ const Home = () => {
           {cont && <Navigate to="/Pokedex" />}
           
         </div>} />
-        <Route path="/Pokedex" element={<Pokedex name='ivan' />} />
-        <Route path="/Pokedex/:id" element={<Pokemon />} />
+        <Route path="/Pokedex" element={<Pokedex />} />
+        <Route path="/Pokemon/:id" element={<Pokemon />} />
       </Routes>
     </div>
   )

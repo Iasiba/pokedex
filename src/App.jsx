@@ -135,9 +135,7 @@ function App() {
   return (
     <div className="App">
 
-      <InputSearch
-        setInputSearch={setInputSearch}
-      />
+      <InputSearch/>
       <Pagination
         arrayPages={arrayPages/*arrayResidents*/}
         currentPage={currentPage}

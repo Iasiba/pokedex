@@ -9,7 +9,7 @@ const Residents = ({url}) => {
     <article className='card'>
       <img src={resident?.sprites.other['official-artwork'].front_default} alt="" />
       <h2>{resident?.name}</h2>
-      <p>Gender: {resident?.gender}</p>
+      <p>Type: {}</p>
     </article>
   )
 }

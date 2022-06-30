@@ -21,21 +21,18 @@ const Pokemon = () => {
             </header>
             <section className='pokemon'>
                 <div className='pokemonInfo'>
-
                     <div className='pokemonImg'>
                         <img src={`${pokemon?.sprites.other['official-artwork'].front_default}`} alt="" />
                         <div><h2>{pokemon?.name}</h2></div>
                     </div>
-
-
-
                     <div className='pokemonCharacter'>
                         <div className='type'>
-                            <h2>Type</h2>
-
+                            <h2 >Type</h2>
+                            <div>{`${pokemon?.types[0].type.name}`}</div>
                         </div>
-                        <div className='pokemonAbilities'>
+                        <div className='pokemonAbilities'>  
                             <h2>Abilities</h2>
+                            {pokemon?.abilities?.map(Ability=><div className='pokemonAbility'  key={Ability?.ability?.name}>{Ability?.ability?.name}</div> )}  
                         </div>
                     </div>
                 </div>
@@ -43,8 +40,8 @@ const Pokemon = () => {
                     <div><b>Encounters</b></div>
                     <div>
                         <h2>Movements</h2>
+                        {pokemon?.moves?.map(pokemon=><div className='pokemonMove' key={pokemon.move.name}>{pokemon.move.name}</div>)}
                     </div>
-
                 </div>
             </section>
         </div>

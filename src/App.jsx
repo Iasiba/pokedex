@@ -13,7 +13,7 @@ function App() {
   console.log(location)
   const [currentPage, setCurrentPage] = useState(1)
   let arrayResidents = []
-  const residentPerPage = 6
+  const residentPerPage = 8
   if (location?.results.length < residentPerPage) {
     arrayResidents = [...location?.results]
   } else {

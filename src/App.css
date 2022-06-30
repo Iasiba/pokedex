@@ -101,14 +101,16 @@ hr {
   border-color: rgb(175, 130, 130);
   left: 10px;
 }
-#menu{
-  margin-top:30px;
+
+#menu {
+  margin-top: 30px;
 }
+
 #menu li {
   float: left;
   position: relative;
   padding: 6px 0;
-  
+
   list-style: none;
   border-radius: 2px;
 }
@@ -120,6 +122,7 @@ hr {
   text-decoration: none;
   text-transform: uppercase;
 }
+
 /*ocultamos el dropdown*/
 #menu>li>ul {
   display: none;
@@ -129,26 +132,31 @@ hr {
   padding: 0;
   z-index: 2;
 }
+
 /*le damos el color blanco al enlance del submenu y el background negro */
 #menu a:hover {
   width: 120px;
 }
+
 #menu li>ul a {
   width: 150px;
   display: block;
   color: rgb(0, 0, 0);
 }
+
 /* Con esto mantenemos el codigo submenu activo */
 #menu li:hover>ul {
   display: block;
   width: 150px;
   top: 35px;
 }
-.dropdown{
+
+.dropdown {
   background-color: red;
   box-shadow: 0 0 1px black;
 }
-.dropdown>a{
+
+.dropdown>a {
   color: white;
 }
 
@@ -161,24 +169,34 @@ html {
 }
 
 .card-container {
-  margin-top: 30px;
+  margin: 15px auto;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
+  width: 80%;
 }
-
-.card {
-  width: 220px;
-
+.card{
   color: black;
   padding: 10px;
   border-radius: 10px;
+  position: relative;
+  min-height: 250px;
+  width: 250px;
 }
-
-img {
-  width: 100%;
-  border-radius: 7px;
+.card>h2{
+  justify-content: center;
+}
+.card>p{
+  text-align: initial;
+  display: flex;
+  padding: 9px;
+}
+.card>img{
+  width: 70%;
+  position: absolute;
+  top: 90px;
+  left: 90px;
 }
 
 body {
@@ -263,22 +281,79 @@ input {
   color: red;
   box-shadow: 0 0 4px black;
 }
+.rock{
+  box-shadow: 0 0 4px brown;
+  color: brown;
+}
+.poison{
+  box-shadow: 0 0 4px rgb(255, 0, 221);
+  color: rgb(255, 0, 221);
+}
+.fire{
+  box-shadow: 0 0 4px rgb(253, 76, 53);
+  color: rgb(253, 76, 53);
+}
+.water{
+  box-shadow: 0 0 4px rgb(3, 145, 253);
+  color:rgb(3, 145, 253);
+}
+.ice{
+  box-shadow: 0 0 4px rgb(72, 248, 216);
+  color:rgb(87, 154, 142);
+} 
+.grass{
+  box-shadow: 0 0 4px rgb(3, 253, 16);
+  color:rgb(76, 143, 79);
+}
+.psychic{
+  box-shadow: 0 0 4px rgb(186, 3, 253);
+  color:rgb(186, 3, 253);
+}
+.electric{
+  box-shadow: 0 0 4px rgb(253, 253, 3);
+  color: rgb(145, 145, 83);
+}
+.normal, .dark, .ghost, .steel{
+  box-shadow: 0 0 4px rgb(0, 0, 0);
+  color:rgb(0, 0, 0);
+}
+.ground{
+  box-shadow: 0 0 4px rgb(130, 65, 0);
+  color:rgb(130, 65, 0);
+}
+.bug{
+  box-shadow: 0 0 4px rgb(222, 161, 104);
+  color:rgb(222, 161, 104);
+}
+.dragon{
+  box-shadow: 0 0 4px rgb(84, 69, 48);
+  color:rgb(84, 69, 48);
+}
+.fairy{
+  box-shadow: 0 0 4px rgb(0, 208, 255);
+  color:rgb(0, 208, 255);
+}
+.fighting{
+  box-shadow: 0 0 4px rgb(255, 0, 0);
+  color:rgb(255, 0, 0);
+}
+
 
 
 /*pokemon@*/
 
-.pokemonContainer{
-  height: 100vh;
-  width: 100vw;
+.pokemonContainer {
   justify-content: center;
   background-color: aqua;
 }
-.Head{
+
+.Head {
   height: 20%;
   width: 100%;
   position: relative;
 }
-.pokemon{
+
+.pokemon {
   height: auto;
   min-height: 80%;
   gap: 1%;
@@ -287,19 +362,22 @@ input {
   flex-wrap: wrap;
 }
 
-.Head>img{
+.Head>img {
   position: absolute;
 }
-.pokemonInfo{
+
+.pokemonInfo {
   min-width: 400px;
-  height:100%;
+  height: 100%;
   width: 50%;
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin-top: 30px;
 }
-.pokemonImg{
-  min-height: 250px;
+
+.pokemonImg {
+  min-height: 350px;
   width: 60%;
   background-color: white;
   position: relative;
@@ -307,30 +385,34 @@ input {
   justify-content: center;
   border-radius: 5px;
   box-shadow: 0 0 1px black;
- 
+ margin-top: 8px;
 }
-.pokemonImg>div{
+
+.pokemonImg>div {
   position: absolute;
-  bottom: 20%;
+  bottom: 9%;
   font-weight: 1000;
   font-size: 20px;
 
 }
-.pokemonImg>img{
+
+.pokemonImg>img {
   height: 90%;
   width: min-content;
   position: absolute;
-  bottom: 40%;
+  bottom: 20%;
 }
-.pokemonCharacter{
-  display: flex;  
+
+.pokemonCharacter {
+  display: flex;
   width: 70%;
   gap: 5%;
   padding: 0 5%;
+  margin: 15px;
 }
 
-.pokemonCharacter>div{
-  min-height: 50px;
+.pokemonCharacter>div {
+  min-height: 30px;
   width: 50%;
   background-color: white;
   border-radius: 5px;
@@ -338,18 +420,33 @@ input {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 15px;
+  gap: 10px;
+  padding: 10px;
 }
-.pokemonMoves{
+.pokemonAbility{
+  width: 90%;
+  border-top: 1px solid rgb(220, 173, 173);
+  text-align: center;
+  padding: 10px;
+}
+.type>div{
+  width: 90%;
+  border-top: 1px solid rgb(220, 173, 173);
+  text-align: center;
+  padding: 10px;  
+}
+
+.pokemonMoves {
   gap: 5%;
   padding: 3%;
   min-width: 300px;
- width: 25%;
- display: flex;
- flex-direction: column;
- align-items: center;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.pokemonMoves>div{
+
+.pokemonMoves>div {
   min-height: 40px;
   width: 100%;
   background-color: white;
@@ -359,4 +456,20 @@ input {
   flex-direction: column;
   align-items: center;
   padding: 5%;
+  margin-bottom: 10px;
+}
+.pokemonMove{
+  border-top: 1px solid rgb(220, 173, 173);
+  text-align: center;
+  padding: 10px;
+  width: 70%;
+  border-left: none;
+}
+.pokemonMove:hover{
+  box-shadow: 0 0 10px black;
+  border-radius: 3%;
+  color: red;
+}
+.pokemonMoves>div>h2{
+  margin-bottom: 10px;
 }

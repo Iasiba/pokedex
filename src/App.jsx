@@ -6,11 +6,14 @@ import Residents from './components/Residents'
 import InputSearch from './components/InputSearch'
 import Pagination from './components/Pagination'
 import pokemon from './hooks/usePoketype'
+import {useSelector}from 'react-redux'
 
 function App() {
-  const [type, setType] = useState('')
+  //const [types, setTypes] = useState('')
+  const types=useSelector(state=>state.types)
   const [inputSearch, setInputSearch] = useState() 
-  const location =type?pokemon(type)?.pokemon.map(pokemon=>pokemon=pokemon.pokemon):useLocation(inputSearch)?.results
+  console.log(types)
+  const location =types?pokemon(types)?.pokemon?.map(pokemon=>pokemon=pokemon.pokemon):useLocation(inputSearch)?.results
 
   //console.log(location)
   const [currentPage, setCurrentPage] = useState(1)

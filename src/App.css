@@ -90,6 +90,11 @@ input {
 .pokedex {
   text-align: center;
 }
+.pokedex>h2{
+  color: red;
+  margin: 5px;
+  margin-top: 20px;
+}
 
 
 /*MENU DESPLEGABLE*/
@@ -196,7 +201,7 @@ html {
   width: 70%;
   position: absolute;
   top: 90px;
-  left: 90px;
+  left: 100px;
 }
 
 body {
@@ -472,4 +477,7 @@ input {
 }
 .pokemonMoves>div>h2{
   margin-bottom: 10px;
+}
+a:hover{
+  color: red;
 }

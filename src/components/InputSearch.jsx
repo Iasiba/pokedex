@@ -1,19 +1,24 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import {setEspecificValue} from '../store/slices/typesSlice'
 import { useNavigate } from 'react-router-dom'
 const InputSearch = () => {
+  const dispach = useDispatch()
   const navigate = useNavigate()
   const submit = e => {
     e.preventDefault()
     navigate(`/Pokemon/${e.target.firstChild.value}`)
   }
+  const [type, setType] = useState([])
   
   useEffect(() => {
   axios.get(`https://pokeapi.co/api/v2/type/`)
   //axios.get(`https://pokeapi.co/api/v2/type/${id}/`)
-      .then(data => setpokemon(data.data))
+      .then(data => setType(data.data.results.map(data=>data=data.name)))
       .catch(err => console.log(err))
 }, [])
+console.log(type)
   return (
     <section className='form' >
       <form onSubmit={submit}>
@@ -21,13 +26,9 @@ const InputSearch = () => {
         <button > {' Buscar '} </button>
       </form>
       <div id="menu">
-        <li className="dropdown"><a href="">Todos los pokemon</a>
+        <li className="dropdown"><a onClick={()=>dispach(setEspecificValue(""))}>Todos los pokemon</a>
           <ul>
-            <li><span></span><a href="#opcion1">opcion</a></li>
-            <hr />
-            <li><span></span><a href="#opcion2">opcion</a></li>
-            <hr />
-            <li><span></span><a href="#opcion3">opcion</a></li>
+            <li><span></span>{type.map(type=><a onClick={()=>dispach(setEspecificValue(type))}>{type}</a>)}</li>
           </ul>
         </li>
       </div>

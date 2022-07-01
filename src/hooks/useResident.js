@@ -3,7 +3,7 @@ import { useEffect } from "react"
 import { useState } from "react"
 
 const useResident = url => {
-
+ // console.log(url)
   const [resident, setResident] = useState()
 
   useEffect(() => {
@@ -12,8 +12,6 @@ const useResident = url => {
       .catch(err => console.log(err))
 
   }, [])
-  
-
   return resident
 }
 

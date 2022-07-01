@@ -5,16 +5,13 @@ import axios from "axios"
 const Pokemon = () => {
     const { id } = useParams()
     const [pokemon, setpokemon] = useState()
-    console.log(id)
     useEffect(() => {
         //`https://pokeapi.co/api/v2/berry/${id}/`
         axios.get(`https://pokeapi.co/api/v2/pokemon/${id}/`)
+        //axios.get(`https://pokeapi.co/api/v2/type/${id}/`)
             .then(data => setpokemon(data.data))
             .catch(err => console.log(err))
-            .finally(console.log(pokemon))
     }, [id])
-
-    console.log(pokemon)
     return (
         <div className='pokemonContainer'>
             <header className='Head'>
@@ -28,7 +25,7 @@ const Pokemon = () => {
                     <div className='pokemonCharacter'>
                         <div className='type'>
                             <h2 >Type</h2>
-                            <div>{`${pokemon?.types[0].type.name}`}</div>
+                            {pokemon?.types?.map(type=><div>{type.type.name}</div>)}
                         </div>
                         <div className='pokemonAbilities'>  
                             <h2>Abilities</h2>

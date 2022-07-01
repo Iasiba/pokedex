@@ -13,7 +13,7 @@ const useLocation = locationParam => {
   } else {
     locationNumber = Math.ceil(Math.random() * 126)
   }
-
+  
   const URL = `https://pokeapi.co/api/v2/pokemon/?limit=200&offset=100/`
 
   useEffect(() => {

@@ -148,7 +148,7 @@ hr {
 #menu li:hover>ul {
   display: block;
   width: 150px;
-  top: 35px;
+  top: 31px;
 }
 
 .dropdown {

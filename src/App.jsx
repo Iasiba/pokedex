@@ -5,24 +5,27 @@ import useLocation from './hooks/useLocation'
 import Residents from './components/Residents'
 import InputSearch from './components/InputSearch'
 import Pagination from './components/Pagination'
+import pokemon from './hooks/usePoketype'
 
 function App() {
+  const [type, setType] = useState('')
+  const [inputSearch, setInputSearch] = useState() 
+  const location =type?pokemon(type)?.pokemon.map(pokemon=>pokemon=pokemon.pokemon):useLocation(inputSearch)?.results
 
-  const [inputSearch, setInputSearch] = useState()
-  const location = useLocation(inputSearch)
-  console.log(location)
+  //console.log(location)
   const [currentPage, setCurrentPage] = useState(1)
   let arrayResidents = []
   const residentPerPage = 8
-  if (location?.results.length < residentPerPage) {
-    arrayResidents = [...location?.results]
+
+  if (location?.length < residentPerPage) {
+    arrayResidents = [...location]
   } else {
     const lastResident = currentPage * residentPerPage
-    arrayResidents = location?.results.slice(lastResident - residentPerPage, lastResident)
+    arrayResidents = location?.slice(lastResident - residentPerPage, lastResident)
   }
 
   let arrayPages = []
-  let quantityPages = Math.ceil(location?.results.length / residentPerPage) // 11 = cantidad paginas máximas
+  let quantityPages = Math.ceil(location?.length / residentPerPage) // 11 = cantidad paginas máximas
   const pagesPerBlock = 5
   let currentBlock = Math.ceil(currentPage / pagesPerBlock) // 2 = segundo bloque
   // Analiza si estamos en el último(true) o no(false)
@@ -37,7 +40,7 @@ function App() {
       arrayPages.push(i)
     }
   }
-  console.log(arrayPages)
+ // console.log(arrayResidents)
 
   /*
     const CardsforPage = 8;
@@ -130,7 +133,7 @@ function App() {
     console.log(down, " ", up, " x ", currentBlock, (pageforblock + 1), CardsforPage, " ", currentBlock * (pageforblock + 1) * CardsforPage,blocks)
     console.log(arrayResidents, " # #")
   */
-  console.log(arrayPages, '%', currentPage, "%", quantityPages, "%", arrayResidents)
+ // console.log(arrayPages, '%', currentPage, "%", quantityPages, "%", arrayResidents)
 
   return (
     <div className="App">
@@ -144,10 +147,10 @@ function App() {
       />
       <div className='card-container'>
         {
-          arrayResidents/*arrayPages*/?.map(data => (
+          arrayResidents&&arrayResidents/*arrayPages*/?.map(data => (
             <Residents
-              key={data.url}
-              url={data.url}
+              key={data?.url}
+              url={data?.url}
             />
           ))
         }

@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import axios from 'axios'
+import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 const InputSearch = () => {
   const navigate = useNavigate()
@@ -6,6 +7,13 @@ const InputSearch = () => {
     e.preventDefault()
     navigate(`/Pokemon/${e.target.firstChild.value}`)
   }
+  
+  useEffect(() => {
+  axios.get(`https://pokeapi.co/api/v2/type/`)
+  //axios.get(`https://pokeapi.co/api/v2/type/${id}/`)
+      .then(data => setpokemon(data.data))
+      .catch(err => console.log(err))
+}, [])
   return (
     <section className='form' >
       <form onSubmit={submit}>
@@ -23,10 +31,7 @@ const InputSearch = () => {
           </ul>
         </li>
       </div>
-
-
     </section>
-
   )
 }
 

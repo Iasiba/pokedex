@@ -570,6 +570,9 @@ input {
 .pokemonMoves>div>h2{
   margin-bottom: 10px;
 }
-a:hover{
+ul>li>a :hover{
   color: red;
+}
+ul>li>a{
+ border-top: 1px solid rgb(244, 225, 225);
 }

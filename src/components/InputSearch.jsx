@@ -28,7 +28,7 @@ console.log(type)
       <div id="menu">
         <li className="dropdown"><a onClick={()=>dispach(setEspecificValue(""))}>Todos los pokemon</a>
           <ul>
-            <li><span></span>{type.map(type=><a onClick={()=>dispach(setEspecificValue(type))}>{type}</a>)}</li>
+            <li>{type.map(type=><a onClick={()=>dispach(setEspecificValue(type))} className="typ">{type}</a>)}</li>
           </ul>
         </li>
       </div>

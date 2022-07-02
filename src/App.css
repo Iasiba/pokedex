@@ -14,6 +14,17 @@
   background-color: red;
   height: 40px;
 }
+.red>div{
+ width: 400px;
+ position: relative;
+}
+.logo{
+  height: 40px;
+  
+ width: max-content;
+ margin-top: 6px;
+ margin-left: 10%;
+}
 
 .black {
   background-color: black;
@@ -290,57 +301,138 @@ input {
   box-shadow: 0 0 4px brown;
   color: brown;
 }
+.rock>h2{
+  background-color: brown;
+  color: white;
+  border-radius: 10px;
+}
 .poison{
   box-shadow: 0 0 4px rgb(255, 0, 221);
   color: rgb(255, 0, 221);
+}
+.poison>h2{
+  background-color:rgb(255, 0, 221);
+  color: white;
+  border-radius: 10px;
 }
 .fire{
   box-shadow: 0 0 4px rgb(253, 76, 53);
   color: rgb(253, 76, 53);
 }
+.fire>h2{
+  background-color: rgb(253, 76, 53);
+  color: white;
+  border-radius: 10px;
+}
 .water{
   box-shadow: 0 0 4px rgb(3, 145, 253);
   color:rgb(3, 145, 253);
+}
+.water>h2{
+  background-color: rgb(3, 145, 253);
+  color: white;
+  border-radius: 10px;
 }
 .ice{
   box-shadow: 0 0 4px rgb(72, 248, 216);
   color:rgb(87, 154, 142);
 } 
+.ice>h2{
+  background-color: rgb(72, 248, 216);
+  color: white;
+  border-radius: 10px;
+}
 .grass{
   box-shadow: 0 0 4px rgb(3, 253, 16);
   color:rgb(76, 143, 79);
+}
+.grass>h2{
+  background-color:rgb(3, 253, 16);
+  color: white;
+  border-radius: 10px;
+    background: linear-gradient(0deg,rgba(203,255,169,1) 0%,rgba(43,131,0,1) 100%);
+
 }
 .psychic{
   box-shadow: 0 0 4px rgb(186, 3, 253);
   color:rgb(186, 3, 253);
 }
+.psychic>h2{
+  background-color: rgb(186, 3, 253);;
+  color: white;
+  border-radius: 10px;
+}
 .electric{
   box-shadow: 0 0 4px rgb(253, 253, 3);
-  color: rgb(145, 145, 83);
+  color:rgb(145, 145, 83) ;
+}
+.electric>h2{
+  background-color:rgb(253, 253, 3);
+  color: white;
+  border-radius: 10px;
 }
 .normal, .dark, .ghost, .steel{
   box-shadow: 0 0 4px rgb(0, 0, 0);
   color:rgb(0, 0, 0);
 }
+.normal h2, .dark h2, .ghost h2, .steel h2{
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border-radius: 10px;
+}
 .ground{
   box-shadow: 0 0 4px rgb(130, 65, 0);
   color:rgb(130, 65, 0);
+}
+.ground>h2{
+  background-color: rgb(130, 65, 0);
+  color: white;
+  border-radius: 10px;
 }
 .bug{
   box-shadow: 0 0 4px rgb(222, 161, 104);
   color:rgb(222, 161, 104);
 }
+.bug>h2{
+  background-color: rgb(222, 161, 104);
+  color: white;
+  border-radius: 10px;
+}
 .dragon{
   box-shadow: 0 0 4px rgb(84, 69, 48);
   color:rgb(84, 69, 48);
+}
+.dragon>h2{
+  background-color: rgb(84, 69, 48);
+  color: white;
+  border-radius: 10px;
 }
 .fairy{
   box-shadow: 0 0 4px rgb(0, 208, 255);
   color:rgb(0, 208, 255);
 }
+.fairy>h2{
+  background-color: rgb(0, 208, 255);
+  color: white;
+  border-radius: 10px;
+}
 .fighting{
   box-shadow: 0 0 4px rgb(255, 0, 0);
   color:rgb(255, 0, 0);
+}
+.fighting>h2{
+  background-color: rgb(255, 0, 0);
+  color: white;
+  border-radius: 10px;
+}
+.flying{
+  box-shadow: 0 0 4px rgb(42, 9, 255);
+  color:rgb(9, 32, 124);
+}
+.flying>h2{
+  background-color: rgb(42, 9, 255);
+  color: white;
+  border-radius: 10px;
 }
 
 
@@ -349,7 +441,7 @@ input {
 
 .pokemonContainer {
   justify-content: center;
-  background-color: aqua;
+  background-color: rgb(0, 255, 238);
 }
 
 .Head {

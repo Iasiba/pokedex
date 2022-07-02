@@ -51,7 +51,6 @@ const Home = () => {
             <input type="text" id='avatar' placeholder='                avatar' {...register('nombre')} />
             <button onClick={() => setcont(true)} className='Submit'>Comenzar</button>
           </form>
-
           {cont && <Navigate to="/Pokedex" />}
           
         </div>} />
